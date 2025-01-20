@@ -44,32 +44,32 @@ Represents a city with x and y coordinates and methods to:
 ### 2. Solution Representation
 
 Each solution (individual) is represented as a permutation of cities, with helper functions:
-- `creer_parcours()`: Creates random route permutations
-- `longueur_parcours()`: Calculates total route distance
+- `create_tour()`: Creates random route permutations
+- `tour_length()`: Calculates total route distance
 
 ### 3. Genetic Algorithm Components
 
 #### Population Initialization
-- `generer_population_initiale()`: Creates initial random population
+- `generate_initial_population()`: Creates initial random population
 
 #### Fitness Evaluation
-- `evaluer_population()`: Evaluates and sorts population by route distance
+- `evaluate_population()`: Evaluates and sorts population by route distance
 
 #### Selection
-- `selection_par_tournoi()`: Tournament selection for parent choice
+- `tournament_selection()`: Tournament selection for parent choice
 
 #### Crossover
-- `crossover_ordonne()`: Order Crossover (OX) operator
+- `ordered_crossover()`: Order Crossover (OX) operator
   - Preserves order and position of some cities from one parent
   - Fills remaining positions with cities from second parent
 
 #### Mutation
-- `mutation_echange()`: Swap mutation operator
+- `swap_mutation()`: Swap mutation operator
   - Randomly exchanges pairs of cities
   - Controlled by mutation rate parameter
 
 #### Generation Evolution
-- `nouvelle_generation()`: Creates new population through:
+- `new_generation()`: Creates new population through:
   - Elitism preservation
   - Parent selection
   - Crossover
